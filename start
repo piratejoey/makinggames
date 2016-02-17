@@ -1,0 +1,17 @@
+import pygame, sys
+from pygame.locals import *
+
+pygame.init()
+#set variable = create display screen
+DISPLAYSURF = pygame.display.set_mode((400,300))
+#set caption that appears at top of window
+pygame.display.set_caption("Hello")
+#set an infinite loop so that the game constantly updates
+while True:
+	#for i in (all Event objects)
+    for event in pygame.event.get():
+            if event.type == QUIT:
+                    pygame.quit()
+                    sys.exit()
+	#draws the Surface object to the screen with any changes
+    pygame.display.update()
