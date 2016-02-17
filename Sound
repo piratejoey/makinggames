@@ -1,0 +1,17 @@
+# Loading and playing a sound effect:
+soundObj = pygame.mixer.Sound('beepingsound.wav')
+soundObj.play()
+
+
+# Loading and playing background music:
+pygame.mixer.music.load(backgroundmusic.mp3')
+pygame.mixer.music.play(-1, 0.0)
+# ...some more of your code goes here...
+pygame.mixer.music.stop()
+
+
+"""
+To load a background music file, call the pygame.mixer.music.load() function and pass it a string argument of the sound file to load. This file can be WAV, MP3, or MIDI format.
+
+To begin playing the loaded sound file as the background music, call the pygame.mixer.music.play(-1, 0.0) function. The -1 argument makes the background music forever loop when it reaches the end of the sound file. If you set it to an integer 0 or larger, then the music will only loop that number of times instead of looping forever. The 0.0 means to start playing the sound file from the beginning. If you pass a larger integer or float, the music will begin playing that many seconds into the sound file. For example, if you pass 13.5 for the second parameter, the sound file with begin playing at the point 13.5 seconds in from the beginning
+"""
